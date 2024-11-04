@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <script src="https://kit.fontawesome.com/4f3bef7161.js" crossorigin="anonymous"></script>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: #ffffff;
+}
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 300px;
+  margin: 30px 20px;
+  padding-left: 60px;
+  controls: shown;
+}
+.about-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(Service-header.png);
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  padding: 10px 10%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 140px;
+}
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px 20px;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ea3d07;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after{
+  width: 100%;
+}
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+.header-text h1{
+  font-size: 60px;
+  margin-top: 20px;
+}
+.header-text h1 span{
+  color: #ea3d07;
+}
+.btn {
+  background: #ea3d07;
+  color: #fff;
+  border: none;
+  
+}
+.btn:hover{
+  background: #000;
+  border: 2px solid #ea3d07;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+ a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.btn .btn2{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.about-us {
+  padding: 50px 20px;
+  background-color: #000000;
+}
+#about {
+  padding: 80px 0;
+  color: #fff;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+  
+}
+.about-col-2 {
+  flex-basis: 60%;
+  color: #fff;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+.sub-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.kooter {
+  margin-top: 0;
+  background: #333;
+}
+.copyright p {
+  text-align: center;
+  font-size: 25px;
+  color: #ababab;
+  
+}
+nav .fa-solid {
+  display: none;
+}
+footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 10px;
+            min-width: 200px;
+            background: #333;
+        }
+        .footer-logo img{
+            width: 140px;
+        }
+
+        /* Address, Email, Phone Styling */
+        .footer-section p {
+            margin: 5px 50px;
+            font-size: 25px;
+        }
+        #services {
+  padding: 30px 0;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.services-list div {
+  background: #262626;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+transition: background 0.5s, transform 0.5s;
+}
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover{
+  background: #ea3d07;
+  transform: translatey(-10px);
+}
+.about-button div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+@media (max-width: 600px) {
+   iframe {
+     width: 90%;
+     height: 180px;
+   }
+   #header {
+     background-image: url(Mobile-service.png);
+   }
+   .header-text {
+    margin-top: 100%; 
+    font-size: 16px;
+   }
+  .header-text h1 {
+    font-size: 30px;
+  } 
+  nav .fa-solid {
+  display: block;
+  font-size: 25px;
+  color: #fff;
+}
+nav ul{
+  background: #ea3d07;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100vh;
+  padding-top: 50px;
+  z-index: 2;
+  transition: right 0.5s;
+}
+nav ul li{
+  display: block;
+  margin: 25px;
+}
+nav ul .fa-solid {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+ cursor: pointer; 
+ color: #fff;
+} 
+.sub-title{
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.about-col-1, .about-col-2{
+  flex-basis: 100%;
+}
+.about-col-1 {
+  margin-bottom: 30px;
+}
+.about-col-1 img {
+  height: 300px;
+}
+.about-col-2 {
+  font-size: 14px;
+}
+.tab-links {
+  font-size: 16px;
+  margin-right: 20px;
+}
+.copyright{
+  font-size: 12px;
+}
+.footer {
+                flex-direction: column;
+                text-align: center;
+            }
+  .footer-section p {
+    font-size: 14px;
+}
+.about-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+   }
+       </style>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="Logo3.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="https://sarkarkitchenandvlog.blogspot.com/?m=1">Blog</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" style="color: #fff;" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Sarkar kitchen and vlog</p>
+        <h1>Welcome to<span>Services</span><br>page</h1>
+      </div>
+    </div>
+  </div>
+      <div id="services">
+        <div class="container">
+          <h1 style="color:#ea3d07;">Services !.</h1>
+          
+          <div class="services-list">
+            <div>
+              <i class="fa-brands fa-youtube"></i>
+              <h2>Watch on Youtube</h2>
+              <p>Learn delicious and beautiful recipes easily through youtube videos.</p>
+              <a href="https://youtube.com/@sarkarkitchenandvlog?si=kHfwJPE_s8k-SBCw">Learn more</a>
+            </div>
+            <div>
+             <i class="fa-brands fa-square-facebook"></i>
+               <h2>Facebook Page</h2>
+              <p>Learn delicious and beautiful recipes easily through facebook videos.</p>
+              <a href="https://www.facebook.com/Sarkarkitchenandvlog?mibextid=ZbWKwL">Learn more</a>
+            </div>
+            <div>
+             <i class="fa-brands fa-blogger"></i>
+               <h2>Recipe Blog</h2>
+              <p>Learn delicious and beautiful recipes in written format.</p>
+              <a href="https://sarkarkitchenandvlog.blogspot.com/?m=1">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <section class="about-us">
+        <h2 style="padding-right:20px;">Youtube videos</h2>
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+     <img src="youtube.png"> 
+        </div>
+        <div class="about-col-2">
+      <h1 class="sub-title">Sarkar kitchen and vlog</h1>
+      <p style="color: #fff;">Watch videos to learn recipes in our youtube channel.</p>
+      </div>
+      </div>
+      </div>
+            <img src="Youtube-page.png" class="about-photo">
+      </div>
+      </section>
+     
+       <section class="about-us">
+  <h2 style="padding-right:20px;">Food blog</h2>
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+     <img src="Blog.png"> 
+        </div>
+        <div class="about-col-2">
+      <h1 class="sub-title">Sarkar kitchen and vlog blogspot</h1>
+      <p style="color: #fff;">Learn recipes in written format in our own recipe food blog in blogger.</p>
+      </div>
+      </div>
+      </div>
+            <img src="Blog-page.png" class="about-photo">
+      </div>
+      </section>
+
+       <section class="about-us">
+  
+        <h2 style="padding-right:20px;">Facebook page</h2>
+        <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+     <img src="Facebook.png"> 
+        </div>
+        <div class="about-col-2">
+      <h1 class="sub-title">Sarkar kitchen and vlog(facebook)</h1>
+      <p style="color: #fff;">Watch videos to learn recipes in our facebook page.</p>
+      </div>
+      </div>
+      </div>
+      <img src="Facebook-page.png" class="about-photo">
+      </div>
+      </section>
+      <h2>Youtube videos</h2>
+ <iframe src="https://www.youtube.com/embed/jlWYqvMEy6c?&theme=dark&autohide=2"frameborder="0" controls="shown"></iframe>
+ <iframe src="https://www.youtube.com/embed/oY0oB7fawho?&theme=dark&autohide=2"frameborder="0" controls="shown"></iframe>
+ <iframe src="https://www.youtube.com/embed/RdHgjZe5fCI?&theme=dark&autohide=2"frameborder="0" controls="shown"></iframe>
+ <iframe src="https://www.youtube.com/embed/m62R3O0ueUI?&theme=dark&autohide=2"frameborder="0" controls="shown"></iframe>
+ <iframe src="https://www.youtube.com/embed/0-jil56_FnY?&theme=dark&autohide=2"frameborder="0" controls="shown"></iframe>
+<iframe src="https://www.youtube.com/embed/nMMZquSgQ1E?&theme=dark&autohide=2"frameborder="0" controls="shown"></iframe>
+<iframe src="https://www.youtube.com/embed/V7a37etSANs?&theme=dark&autohide=2"frameborder="0" controls="shown"></iframe>
+<div class="footer-section">
+      <footer class="footer">
+        <!-- Logo Section -->
+        <div class="footer-section footer-logo">
+            <img src="Logo3.png">
+        </div>
+        
+        <!-- Address Section -->
+        <div class="footer-section">
+            <p><strong>Address:</strong></p>
+            <p>1234 Street Name</p>
+            <p>City, State, Zip Code</p>
+        </div>
+        <div>
+            <p><strong>Email:</strong></p>
+            
+            <p>contact@example.com</p>
+        </div>
+        <div>
+            <p><strong>Phone:</strong></p>
+            
+            <p>+1 (123) 456-7890</p>
+        </div>
+    </footer>
+      <div class="kooter">
+        <div class="copyright">
+          <p>made with love by Sarkar Kitchen and Vlog</p>
+        </div>
+      </div>
+  <script>
+      var sidemenu = document.getElementById("sidemenu");
+      
+      function openmenu(){
+        sidemenu.style.right = "0";
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+</body>
+</html>
