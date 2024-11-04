@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+        <script src="https://kit.fontawesome.com/4f3bef7161.js" crossorigin="anonymous"></script>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: ;
+            background: #000000;
+            color: #ffffff;
+        }
+  #header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(About-header.png);
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  padding: 10px 10%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 140px;
+}
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px 20px;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ea3d07;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after{
+  width: 100%;
+}
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+.header-text h1{
+  font-size: 60px;
+  margin-top: 20px;
+}
+.header-text h1 span{
+  color: #ea3d07;
+}
+.btn {
+  background: #ea3d07;
+  color: #fff;
+  border: none;
+}
+.btn:hover{
+  background: #000;
+  border: 2px solid #ea3d07;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+        .log {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .about-section {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 40px;
+            padding: 50px 20px;
+        }
+        .about-section h1{
+          margin-top: 20px;
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 25px;
+        }
+        .about-section p{
+          margin-bottom: 10px;
+          font-size: 20px;
+        }
+        
+        .authors {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+            width: 100%;
+            padding: 50px 20px;
+        }
+        .author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 200px;
+            text-align: center;
+        }
+        .author img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .author-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .our-mission {
+            width: 100%;
+            text-align: center;
+            background: #262626;
+            padding: 50px 20px;
+            border-radius: 10px;
+            height: 200px;
+            font-size: 20px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        .our-mission h2{
+          font-size: 25px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+        }
+        .our-mission p{
+          font-size: 20px;
+        }
+    nav .fa-solid {
+  display: none;
+}
+   footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 10px;
+            min-width: 200px;
+            background: #333;
+            width: 100%;
+        }
+        .footer-logo img{
+            width: 140px;
+        }
+
+        /* Address, Email, Phone Styling */
+        .footer-section p {
+            margin: 5px 50px;
+            font-size: 25px;
+        }
+        /* Responsive Styling */
+        @media (max-width: 600px) {
+             #header {
+     background-image: url(Mobile-about.png);
+   }
+   .header-text {
+    margin-top: 100%; 
+    font-size: 16px;
+   }
+  .header-text h1 {
+    font-size: 30px;
+  } 
+  nav .fa-solid {
+  display: block;
+  font-size: 25px;
+  color: #fff;
+}
+nav ul{
+  background: #ea3d07;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100vh;
+  padding-top: 50px;
+  z-index: 2;
+  transition: right 0.5s;
+}
+nav ul li{
+  display: block;
+  margin: 25px;
+}
+nav ul .fa-solid {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+ cursor: pointer; 
+ color: #fff;
+}
+          h1 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+          }
+            .authors {
+                flex-direction: row;
+            }
+            .author {
+                flex-direction: row;
+                text-align: left;
+                max-width: 600px;
+                align-items: flex-start;
+            }
+            .author img {
+                margin-right: 15px;
+            }
+            .our-mission {
+              height: 300px;
+            }
+            .copyright{
+  font-size: 12px;
+}
+.footer {
+                flex-direction: column;
+                text-align: center;
+            }
+  .footer-section p {
+    font-size: 14px;
+}
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+    <div class="container">
+      <nav>
+        <img src="Logo3.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="https://sarkarkitchenandvlog.blogspot.com/?m=1">Blog</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" style="color: #fff;" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Sarkar kitchen and vlog</p>
+        <h1>Welcome to<span> About</span><br>us page</h1>
+      </div>
+    </div>
+  </div>
+    <!-- Logo Section -->
+    <img src="Log.jpg" alt="Company Logo" class="log">
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>Welcome to sarkar kitchen and vlog. We are happy to have your visit at our website as you want to know more about this site by visiting the about-us page of the website.</p>
+        <p>We try to provide the best content for our visitors as in the YouTube channel or in the recipe blog we are day by day making our content better and aknowledgeable for the people. <br> Join with us today to become a part of the journey with the taste of Indian cuisines.<br> If you have more additional questions and want to get more information please do not hesitate to contact us by the email.<a href="mailto:sarkarnilima524@gmail.com">sarkarnilima524@gmail.com </a>
+    <h1 style="margin-top: 40px; margin-bottom: 30px; font-size: 25px;">About sarkar kitchen and vlog</h1>
+    <p style="font-size: 20px;">Sarkar kitchen and vlog is a youtube channel which uploads videos related to cooking recipes and vlogs.<br> We also have a recipe blog where the recipes are added in written format. The aim is to supply the best content to our viewers on youtube and also on the 
+</p>
+<h1 style="margin-top: 40px; margin-bottom: 30px; font-size: 25px;">Contact us</h1>
+<p style="font-size: 20px;">If you have any suggestions or problems regarding this website then you can contact me by using the contact us page on my recipe blog or through the contact form of this website.</p>
+    </div>
+
+    <!-- Authors Section -->
+      <h1 style="font-size:25px; text-align:center; margin-top: 20px; margin-bottom: 30px;">Authors</h1>    
+    <div class="authors">
+
+        <div class="author">
+            <img src="Author.jpg" alt="Author 1 Photo">
+            <div>
+                <p class="author-name">Nilima Sarkar</p>
+                <p>Nilima sarkar is a homemaker cook </p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Our Mission Section -->
+    <div class="our-mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to spread our cooking knowledge and experience to the community. <br>And to help the people to learn the preparation methods of the delightful Indian and bengali dishes and its varied health benefits. </p>
+    </div>
+     <div class="footer-section">
+      <footer class="footer">
+        <!-- Logo Section -->
+        <div class="footer-section footer-logo">
+            <img src="Logo3.png">
+        </div>
+        
+        <!-- Address Section -->
+        <div class="footer-section">
+            <p><strong>Address:</strong></p>
+            <p>1234 Street Name</p>
+            <p>City, State, Zip Code</p>
+        </div>
+        <div>
+            <p><strong>Email:</strong></p>
+            
+            <p>contact@example.com</p>
+        </div>
+        <div>
+            <p><strong>Phone:</strong></p>
+            
+            <p>+1 (123) 456-7890</p>
+        </div>
+    </footer>
+      <div class="kooter">
+        <div class="copyright">
+          <p>made with love by Sarkar Kitchen and Vlog</p>
+        </div>
+      </div>
+      
+     <script>
+      var sidemenu = document.getElementById("sidemenu");
+      
+      function openmenu(){
+        sidemenu.style.right = "0";
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+</body>
+</html>
