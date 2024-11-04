@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarkar kitchen and vlog</title>
+    <script src="https://kit.fontawesome.com/4f3bef7161.js" crossorigin="anonymous"></script>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: #ffffff;
+}
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(Back.png);
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  padding: 10px 10%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 140px;
+}
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px 20px;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ea3d07;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after{
+  width: 100%;
+}
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+.header-text h1{
+  font-size: 60px;
+  margin-top: 20px;
+}
+.header-text h1 span{
+  color: #ea3d07;
+}
+.btn {
+  background: #ea3d07;
+  color: #fff;
+  border: none;
+}
+.btn:hover{
+  background: #000;
+  border: 2px solid #ea3d07;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+
+
+ /*--‐---------About Us --------         */
+.about-us {
+  padding: 50px 20px;
+  background-color: #000000;
+}
+#about {
+  padding: 80px 0;
+  color: #fff;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+  
+}
+.about-col-2 {
+  flex-basis: 60%;
+  color: #fff;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+.sub-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ea3d07;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after{
+  width: 50%;
+}
+.tab-contents ul li{
+  list-style-type: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span{
+  color: #ea3d07;
+  font-size: 14px;
+}
+.tab-contents{
+  display: none;
+}
+.active-tab{
+  display: block;
+}
+#services {
+  padding: 30px 0;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.services-list div {
+  background: #262626;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+transition: background 0.5s, transform 0.5s;
+}
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover{
+  background: #ea3d07;
+  transform: translatey(-10px);
+}
+.about-button div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+#portfolio {
+  padding: 50px 0;
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ea3d07);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer a{
+  margin-top: 20px;
+  color: #ea3d07;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img{
+  transform: scale(1.1);
+}
+.work:hover .layer{
+  height: 100%;
+}
+.contact-left {
+  flex-basis: 35%;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left p i {
+  color: #ea3d07;
+  margin-right: 15px; 
+  font-size: 25px;
+}
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover {
+  color: #ee2b00;
+  transform: translatey(-5px);
+}
+.c-btn {
+  width: 170px;
+  height: 50px;
+  padding: 14px 60px;
+  margin-top: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.contact-right form{
+  width: 100%;
+}
+form input, form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .btn2{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.kooter {
+  margin-top: 0;
+  background: #333;
+}
+.copyright p {
+  text-align: center;
+  font-size: 25px;
+  color: #ababab;
+  
+}
+nav .fa-solid {
+  display: none;
+}
+footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 10px;
+            min-width: 200px;
+            background: #333;
+        }
+        .footer-logo img{
+            width: 140px;
+        }
+
+        /* Address, Email, Phone Styling */
+        .footer-section p {
+            margin: 5px 50px;
+            font-size: 25px;
+        }
+/* Media queries for mobile */
+@media (max-width: 600px) {
+   
+   #header {
+     background-image: url(Mobile-back.png);
+   }
+   .header-text {
+    margin-top: 100%; 
+    font-size: 16px;
+   }
+  .header-text h1 {
+    font-size: 30px;
+  } 
+  nav .fa-solid {
+  display: block;
+  font-size: 25px;
+  color: #fff;
+}
+nav ul{
+  background: #ea3d07;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100vh;
+  padding-top: 50px;
+  z-index: 2;
+  transition: right 0.5s;
+}
+nav ul li{
+  display: block;
+  margin: 25px;
+}
+nav ul .fa-solid {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+ cursor: pointer; 
+ color: #fff;
+}
+.sub-title{
+  font-size: 40px;
+}
+.about-col-1, .about-col-2{
+  flex-basis: 100%;
+}
+.about-col-1 {
+  margin-bottom: 30px;
+}
+.about-col-2 {
+  font-size: 14px;
+}
+.tab-links {
+  font-size: 16px;
+  margin-right: 20px;
+}
+.contact-left, .contact-right{
+  flex-basis: 100%;
+}
+.copyright{
+  font-size: 12px;
+}
+.footer {
+                flex-direction: column;
+                text-align: center;
+            }
+  .footer-section p {
+    font-size: 14px;
+}
+#msg {
+ color: #ea3d07; 
+ margin-top: 20px;
+ display: block;
+}
+}
+    </style>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="Logo3.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Disclaimer.html">Disclaimer</a></li>
+          <li><a href="https://sarkarkitchenandvlog.blogspot.com/?m=1">Blog</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" style="color: #fff;" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Healthy & tasty recipes</p>
+        <h1>Welcome to<span>Sarkar</span><br>Kitchen and Vlog</h1>
+      </div>
+    </div>
+  </div>
+
+<!-----------About us------------------->
+    <section class="about-us">
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+     <img src="visit.png"> 
+        </div>
+        <div class="about-col-2">
+      <h1 class="sub-title">About Me</h1>
+      <p style="color: #fff;">Sarkar kitchen and vlog is a cooking youtube channel <br>which provides beautiful bengali and indian dishes,<br> a food recipe blog where the recipes are added<br> in a written format with step by step process</p>
+       <div class="tab-titles">
+  <p class="tab-links active-link" onclick="opentab('services')">Services</p>
+         <p class="tab-links" onclick="opentab('links')">links</p>
+         <p class="tab-links" onclick="opentab('contact')">contact</p>
+       </div>
+       <div class="tab-contents" id="services">
+         <ul>
+           <li><span>Videos</span><br>all recipes in video format</li>
+            <li><span>Blog</span><br>all recipes in written format</li>
+             <li><span>images</span><br>all images related to our dishes</li>
+         </ul>
+       </div>
+       <div class="tab-contents" id="links">
+         <ul>
+           <li><span><a href="https://www.facebook.com/Sarkarkitchenandvlog?mibextid=ZbWKwL" style="text-decoration: none; color:#ea3d07;">Facebook</a></span><br>visit now to connect</li>
+            <li><span><a href="https://youtube.com/@sarkarkitchenandvlog?si=kHfwJPE_s8k-SBCw" style="text-decoration: none; color:#ea3d07;">Youtube</a></span><br>visit now to watch</li>
+        <li><span><a href="https://pin.it/60SJUUo14" style="text-decoration: none; color:#ea3d07;">Pinterest</a></span><br>visit now to connect</li>
+         </ul>
+       </div>
+       <div class="tab-contents" id="contact">
+         <ul>
+           <li><span>Address</span><br>coaldump colony,Bhuli,Dhanbad,Jharkhand</li>
+            <li><span>Email</span><br>Sarkarnilima524@gmail.com</li>
+             <li><span>Mobile</span><br>+91 6204399401</li>
+         </ul>
+       </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+      <!-------+--services----------------->
+      <div id="services">
+        <div class="container">
+          <h1 style="color:#ea3d07;">Engage with us !.</h1>
+          <h4 style="color:#ea3d07">Connect and engage with our content </h4>
+          <div class="services-list">
+            <div>
+              <i class="fa-solid fa-cake-candles"></i>
+              <h2>Dessert recipes</h2>
+              <p>Enjoy delicious and beautiful dessert recipes which can be prepared easily.</p>
+              <a href="https://www.youtube.com/playlist?list=PLjSBbwtarFkMxJPOXwrngz4uVjzpN-T6F">Learn more</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-apple-whole"></i>
+               <h2>Veg recipes</h2>
+              <p>Enjoy delicious and beautiful vegetarian recipes which can be prepared easily.</p>
+              <a href="https://www.youtube.com/playlist?list=PLjSBbwtarFkNUah_kDsKV6BP6ccZGTW6a">Learn more</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-fish-fins"></i>
+               <h2>Non-veg recipes</h2>
+              <p>Enjoy delicious and beautiful non-veg recipes which can be prepared easily.</p>
+              <a href="https://www.youtube.com/playlist?list=PLjSBbwtarFkNjAqVOF-UawK0WyXhU8fbv">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--------------CONTENTS---------->
+      <div id="services">
+        <div class="container">
+          <h1 style="color:#ea3d07;">Connect with us !.</h1>
+          <h4 style="color:#ea3d07;">Connect with us across different platforms </h4>
+          <div class="services-list">
+            <div>
+              <i class="fa-brands fa-youtube"></i>
+              <h2>Watch on Youtube</h2>
+              <p>Learn delicious and beautiful recipes easily through youtube videos.</p>
+              <a href="https://youtube.com/@sarkarkitchenandvlog?si=kHfwJPE_s8k-SBCw">Learn more</a>
+            </div>
+            <div>
+             <i class="fa-brands fa-square-facebook"></i>
+               <h2>Facebook Page</h2>
+              <p>Learn delicious and beautiful recipes easily through facebook videos.</p>
+              <a href="https://www.facebook.com/Sarkarkitchenandvlog?mibextid=ZbWKwL">Learn more</a>
+            </div>
+            <div>
+             <i class="fa-brands fa-blogger"></i>
+               <h2>Recipe Blog</h2>
+              <p>Learn delicious and beautiful recipes in written format.</p>
+              <a href="https://sarkarkitchenandvlog.blogspot.com/?m=1">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!----'portfolio---->
+      <div id="portfolio">
+        <div class="container">
+          <h1 class="sub-title">Contents</h1>
+       <div class="work-list">
+         <div class="work">
+           <img src="Dimboti.jpg" height="410px">
+           <div class="layer">
+             <h3>Macher Dim Borboti Recipe</h3>
+             <p>Learn how to make macher dim borboti recipe easily with fish egg </p>
+             <a href="https://www.facebook.com/share/v/9pUqan15an2tDMHm/?mibextid=qi2Omg"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+           </div>
+         </div>
+          <div class="work">
+           <img src="Paneer.jpg" height="410px">
+           <div class="layer">
+             <h3>Niramish Paneer Recipe</h3>
+             <p>Learn how to make niramish paneer recipe easily with fresh white paneer(cottage cheese) </p>
+             <a href="https://youtu.be/jlWYqvMEy6c"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+           </div>
+           
+         </div>
+          <div class="work">
+           <img src="Roll.jpg" height="410px">
+           <div class="layer">
+             <h3>Egg Roll Recipe</h3>
+             <p>Learn how to make egg roll recipe easily with fresh ingredients</p>
+             <a href="https://sarkarkitchenandvlog.blogspot.com/2024/10/egg-roll-recipe.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+           </div>
+         </div>
+       </div>
+        </div>
+      </div>
+      <!----Contact---->
+      <div class="contact">
+        <div class="container">
+          <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Us</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> sarkarnilima524@gmail.com</p>
+          <p><i class="fa-solid fa-square-phone"></i> 91 6204399401</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/Sarkarkitchenandvlog?mibextid=ZbWKwL"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://youtube.com/@sarkarkitchenandvlog?si=kHfwJPE_s8k-SBCw"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://pin.it/60SJUUo14"><i class="fa-brands fa-square-pinterest"></i></a>  
+            <a href="https://sarkarkitchenandvlog.blogspot.com/?m=1"><i class="fa-brands fa-blogger"></i></a>          
+          </div>
+  <button class="btn c-btn">Contact</button>
+        </div>
+        <div class="contact-right"> 
+       <form name="submit-to-google-sheet">
+         <input type="text" name="name" placeholder="Your name" required>
+       <input type="email" name="email" placeholder="Your email" required>
+       <textarea name="message" rows="6" placeholder="Your message"> </textarea>
+       <button type="submit" class="btn btn2">Submit</button>
+       </form>
+       <span id="msg"></span>
+        </div>
+        </div>
+        </div>
+      </div>
+    <div class="footer-section">
+      <footer class="footer">
+        <!-- Logo Section -->
+        <div class="footer-section footer-logo">
+            <img src="Logo3.png">
+        </div>
+        
+        <!-- Address Section -->
+        <div class="footer-section">
+            <p><strong>Address:</strong></p>
+            <p>1234 Street Name</p>
+            <p>City, State, Zip Code</p>
+        </div>
+        <div>
+            <p><strong>Email:</strong></p>
+            
+            <p>contact@example.com</p>
+        </div>
+        <div>
+            <p><strong>Phone:</strong></p>
+            
+            <p>+1 (123) 456-7890</p>
+        </div>
+    </footer>
+      <div class="kooter">
+        <div class="copyright">
+          <p>made with love by Sarkar Kitchen and Vlog</p>
+        </div>
+      </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tablink.classList.remove("active-tab");
+        }
+ event.currentTarget.classList.add("active-link");
+ document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      
+      function openmenu(){
+        sidemenu.style.right = "0";
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyHex4vIfGVEWqh8LdWh15XPEsF3LOplhDn8JTGnEnW4Rqs7DvH2P6oeDjjrNui5gTh/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+  
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+        
+      } )
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
